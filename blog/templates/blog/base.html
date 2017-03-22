@@ -10,6 +10,9 @@
         <body>
           
 			<div class="page-header">
+			{% if user.is_authenticated %}
+				<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+			{% endif %}
 				<h1><a href="/">code & whiskey</a></h1>
 				<p> Little more than just code, and much more than just whiskey</p>
 			</div>
